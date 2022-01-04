@@ -29,8 +29,8 @@ def log (txt):
   	  data =  datetime.now().strftime('%d/%m/%Y %H:%M')  	  
   	  nomeDoArquivo = "log.txt"
   	  txtLog = data +'\n'
-  	  txtlog = +txtLog+txt+'\n\n\n'
-  	  atualizaArquivo(nomeDoArquivo,txt)		
+  	  txtLog = +txtLog+txt+'\n\n\n'
+  	  atualizaArquivo(nomeDoArquivo,txtLog)		
   	  
   	  
 	
@@ -39,13 +39,6 @@ def lerArquivo():
 	return None
 	
 	
-def retornaListaDeProdutos():
-	return None
-
-
-def test():
-	return None
-
 
 
 
