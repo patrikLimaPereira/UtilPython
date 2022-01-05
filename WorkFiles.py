@@ -23,6 +23,14 @@ def atualizaArquivo(nomeDoArquivo, txt):
         arquivo.close()
 
 
+class FileOption(enum.Enum):
+    REC= 'sounds/cat.wav'
+    UPDATE = 'sounds/catImitateLion.wav'
+    
+
+
+
+
 def log(txt):
     data = datetime.now().strftime('%d/%m/%Y %H:%M')
     nomeDoArquivo = "log.txt"
