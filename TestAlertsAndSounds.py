@@ -5,9 +5,8 @@ from WorkFiles import *
 
 
 def main():
-		playSimpleSound(SoundOption.GATO_IMITATE_LION	)
-		print (SoundOption.PACOTE.value)
-				
+    playSimpleSound(SoundOption.GATO_IMITATE_LION)
+    print(SoundOption.PACOTE.value)
+
+
 main()
-
-
