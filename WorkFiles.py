@@ -1,9 +1,9 @@
 from datetime import datetime
+import enum
 
-
-def gravaArquivo(nomeDoArquivo, txt):
+def gravaArquivo(nomeDoArquivo, txt, tipo):
     try:
-        arquivo = open(nomeDoArquivo, 'w+')
+        arquivo = open(nomeDoArquivo, tipo.value)
         arquivo.write(txt)
     except Exception:
         print(Exception.with_traceback)
@@ -12,20 +12,12 @@ def gravaArquivo(nomeDoArquivo, txt):
         arquivo.close()
 
 
-def atualizaArquivo(nomeDoArquivo, txt):
-    try:
-        arquivo = open(nomeDoArquivo, 'a+')
-        arquivo.write(txt)
-    except Exception:
-        print(Exception.with_traceback)
 
-    finally:
-        arquivo.close()
 
 
 class FileOption(enum.Enum):
-    REC= 'sounds/cat.wav'
-    UPDATE = 'sounds/catImitateLion.wav'
+    RECORD= 'w+'
+    UPDATE = 'a+'
     
 
 
